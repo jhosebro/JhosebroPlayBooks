@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Books on Jhosebro play</title>
 
     <link rel="stylesheet" href="css/reset.css">
@@ -30,29 +30,32 @@
         </span>
     </div>
 
-    <div class="topbar cf">
+    <div class="topbar cf" data-id="topbar">
         <span class="topbar-title l-sidebar l-pad">
+            <a data-id="category-toggle" class="category-toggle" href="#"><i class="fa-solid fa-bars"></i></a>
             <i class="fa-solid fa-book"></i>
             <h2>Books</h2>
         </span>
+
+        <div class="categories l-sidebar standout" data-id="categories">
+            <ul>
+                <li><a data-id="category"href="#category/all">All</a></li>
+                <li><a data-id="category" href="#category/scifi">Science Fiction</a></li>
+                <li><a data-id="category" href="#category/romance">Romance</a></li>
+                <li><a data-id="category" href="#category/horror">Horror</a></li>
+                <li><a data-id="category" href="#category/sport">Sports</a></li>
+            </ul>
+        </div>
+
     </div>
 
-    <div></div>
+    <div>
+    </div>
 </header>
-
-<div class="categories l-sidebar standout">
-    <ul>
-        <li><a href="#category/all">All</a></li>
-        <li><a href="#category/scifi">Science Fiction</a></li>
-        <li><a href="#category/romance">Romance</a></li>
-        <li><a href="#category/horror">Horror</a></li>
-        <li><a href="#category/sport">Sports</a></li>
-    </ul>
-</div>
 
 <div class="books-wrapper" data-id="books-wrapper">
     <div class="books l-content l-content-constrained" data-id="books-list">
-        <ul>
+        <ul class="thumbs">
             <li class="thumb">
                 <a class="thumb-link" href="">
                     <span class="overlay"></span>
@@ -126,6 +129,8 @@
 <script src="js/models/Books.js"></script>
 <script src="js/views/BooksList.js"></script>
 <script src="js/views/BookDetail.js"></script>
+<script src="js/views/TopBar.js"></script>
+
 <script src="js/main.js"></script>
 </body>
 </html>

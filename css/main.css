@@ -57,8 +57,12 @@ small {
 }
 
 .l-content-constrained {
-    padding-left: 270px;
-}
+  }
+  @media (min-width: 700px) {
+    .l-content-constrained {
+      padding-left: 270px;
+    }
+  }
 
 .l-row {
     display: table;
@@ -66,9 +70,13 @@ small {
 }
 
 .l-column {
-    display: table-cell;
     vertical-align: top;
-}
+  }
+  @media (min-width: 500px) {
+    .l-column {
+      display: table-cell;
+    }
+  }
 
 /* =========================================================================
  Modular and reusable styles
@@ -113,9 +121,9 @@ small {
   font-weight: 300;
   color: #fff;
   background-color: #1aa1e1;
-  float: left;
+  display: inline-block;
 }
-.topbar-title > i {
+.topbar-title  i {
   font-size: 1.5em;
   margin-right: 0.5em;
 }
@@ -125,11 +133,15 @@ small {
 }
 
 .categories {
+  display: none;
   position: absolute;
   z-index: 100;
   font-size: 1.2em;
   line-height: 2em;
   padding: 0.5em;
+}
+@media (min-width: 700px) {
+  .categories { display: block; }
 }
 
 .categories a {
@@ -139,13 +151,25 @@ small {
   padding-right: 1em;
 }
 
+.category-toggle {
+  }
+  @media (min-width: 700px) {
+      .category-toggle {
+        display: none;
+      }
+  }
+
 .categories a:hover {
   background-color: #e5e5e5;
 }
 
+.thumbs{
+  text-align: center;
+}
+
 .thumb{
-    float: left;
-    height: 207px;
+    display: inline-block;
+    max-height: 207px;
     margin: 0.5em 0.2em;
 }
 
@@ -174,7 +198,11 @@ small {
 
 .thumb-image {
     width: 220px;
-}
+  }
+  .thumb-image > img {
+    width: 100%;
+    display: block;
+  }
 
 /* =========================================================================
  Classes describing state
