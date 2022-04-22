@@ -21,7 +21,7 @@ app.views.BookDetail = Backbone.View.extend({
             '<div class="l-column l-pad">' +
                 '<div class="title">'+ info.title +'</div>' +
                 '<div>' +
-                    (info.authors ? '<em>' + info.authors.join(" - ") + '</em> - ' : "" + info.publishedDate) + ' <br>' +
+                    (info.authors ? '<em>' + info.authors.join(" - ") + '</em> - ' : "") + info.publishedDate + ' <br>' +
                     publisher +
                 '</div>' +
             '</div>' +
